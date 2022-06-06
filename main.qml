@@ -15,16 +15,9 @@ Window {
         y: 0
         width: 400
         height: 240
-//        anchors.fill: parent
-//        anchors.margins: 5
-//        border.color: "royalblue"
-//        border.width: 1
-//        radius: 8
-//        color: "#101010"
         antialiasing: true
         gradient: Gradient {
             GradientStop { position: 0.0; color: "#494c51" }
-//            GradientStop { position: 0.8; color: "#1f2226" }
             GradientStop { position: 1.0; color: "#1a1d21" }
         }
 
@@ -60,43 +53,109 @@ Window {
             }
         }
 
-//        ColumnLayout {
-//            anchors.top: parent.top
-//            anchors.left: parent.left
-//            anchors.right: parent.right
-//            anchors.margins: 7
-//            spacing: 5
+        // Bathroom 2
+        Text {
+            id: bathroom2Label
+            x: 18
+            y: 35
+            font.pixelSize: 12
+            color: "#7e8082"
+            text: "Ванная 2"
+        }
 
-//            Rectangle {
-//                Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-//                Layout.preferredWidth: 150
-//                Layout.preferredHeight: 80
-//                border.color: "seagreen"
-//                border.width: 1
-//                radius: 6
-//                color: "transparent"
-//                antialiasing: true
-//            }
+        Image {
+            id: bathroom2TempImage
+            x: 80
+            anchors.verticalCenter: bathroom2Label.verticalCenter
+            anchors.leftMargin: 10
+            width: 25
+            height: 25
+            source: "qrc:/high-temperature-cold-hot-temperature-svgrepo-com.svg"
+            antialiasing: true
+        }
 
-//            Rectangle {
-//                Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-//                Layout.preferredWidth: 150
-//                Layout.preferredHeight: 80
-//                border.color: "seagreen"
-//                border.width: 1
-//                radius: 6
-//                color: "transparent"
-//                antialiasing: true
-//            }
+        Text {
+            id: bathroom2Temperature
+            anchors.left: bathroom2TempImage.right
+            anchors.verticalCenter: bathroom2TempImage.verticalCenter
+            anchors.leftMargin: 00
+            font.pixelSize: 18
+            color: "white"
+            text: "+27"
+        }
 
-//            Text {
-//                Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-//                Layout.preferredWidth: contentWidth
-//                Layout.preferredHeight: contentHeight
-//                color: "white"
-//                text: "W: " + mainWindow.width + " H: " + mainWindow.height
-//            }
+        Image {
+            id: bathroom2HumidityImage
+            x: 140
+            anchors.verticalCenter: bathroom2Label.verticalCenter
+            anchors.leftMargin: 10
+            width: 25
+            height: 25
+            source: "qrc:/humidity-svgrepo-com.svg"
+            antialiasing: true
+        }
 
-//        }
+        Text {
+            id: bathroom2Humidity
+            anchors.left: bathroom2HumidityImage.right
+            anchors.verticalCenter: bathroom2HumidityImage.verticalCenter
+            anchors.leftMargin: 00
+            font.pixelSize: 18
+            color: "white"
+            text: "80"
+        }
+
+        // Garage
+        Text {
+            id: garage2Label
+            x: 18
+            y: 75
+            font.pixelSize: 12
+            color: "#7e8082"
+            text: "Гараж"
+        }
+
+        Image {
+            id: garage2TempImage
+            x: 80
+            anchors.verticalCenter: garage2Label.verticalCenter
+            anchors.leftMargin: 10
+            width: 25
+            height: 25
+            source: "qrc:/high-temperature-cold-hot-temperature-svgrepo-com.svg"
+            antialiasing: true
+        }
+
+        Text {
+            id: garage2Temperature
+            anchors.left: garage2TempImage.right
+            anchors.verticalCenter: garage2TempImage.verticalCenter
+            anchors.leftMargin: 00
+            font.pixelSize: 18
+            color: "white"
+            text: "+27"
+        }
+
+        Image {
+            id: garage2HumidityImage
+            x: 140
+            anchors.verticalCenter: garage2Label.verticalCenter
+            anchors.leftMargin: 10
+            width: 25
+            height: 25
+            source: "qrc:/humidity-svgrepo-com.svg"
+            antialiasing: true
+        }
+
+        Text {
+            id: garage2Humidity
+            anchors.left: garage2HumidityImage.right
+            anchors.verticalCenter: garage2HumidityImage.verticalCenter
+            anchors.leftMargin: 00
+            font.pixelSize: 18
+            color: "white"
+            text: "80"
+        }
+
     }
 }
