@@ -10,10 +10,10 @@ Window {
 
     Rectangle {
         anchors.fill: parent
-        anchors.margins: 10
+        anchors.margins: 5
         border.color: "royalblue"
-        border.width: 2
-        radius: 10
+        border.width: 1
+        radius: 8
         color: "#101010"
         antialiasing: true
 
