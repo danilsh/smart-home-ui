@@ -2,12 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 
 Window {
-    width: 800
-    height: 480
-    maximumWidth: 800
-    maximumHeight: 480
-    minimumWidth: 800
-    minimumHeight: 480
+    id: mainWindow
     visible: true
     visibility: "FullScreen"
     title: qsTr("smart-home-ui")
@@ -20,5 +15,15 @@ Window {
         border.width: 2
         radius: 10
         color: "#101010"
+        antialiasing: true
+
+        Text {
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.leftMargin: 20
+            anchors.topMargin: 20
+            color: "white"
+            text: "W: " + mainWindow.width + " H: " + mainWindow.height
+        }
     }
 }
