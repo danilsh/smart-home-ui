@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>high-temperature-cold-hot-temperature-svgrepo-com.svg</file>
         <file>humidity-svgrepo-com.svg</file>
+        <file>weather-svgrepo-com.svg</file>
     </qresource>
 </RCC>
