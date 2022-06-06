@@ -1,5 +1,6 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
+import QtQuick.Layouts 1.15
 
 Window {
     id: mainWindow
@@ -17,13 +18,41 @@ Window {
         color: "#101010"
         antialiasing: true
 
-        Text {
+        ColumnLayout {
             anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.leftMargin: 20
-            anchors.topMargin: 20
-            color: "white"
-            text: "W: " + mainWindow.width + " H: " + mainWindow.height
+            anchors.right: parent.right
+            anchors.margins: 7
+            spacing: 5
+
+            Text {
+                Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+                Layout.preferredWidth: contentWidth
+                Layout.preferredHeight: contentHeight
+                color: "white"
+                text: "W: " + mainWindow.width + " " + contentWidth + " H: " + mainWindow.height + " " + contentHeight
+            }
+
+            Rectangle {
+                Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+                Layout.preferredWidth: 150
+                Layout.preferredHeight: 80
+                border.color: "seagreen"
+                border.width: 1
+                radius: 6
+                color: "transparent"
+                antialiasing: true
+            }
+
+            Rectangle {
+                Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+                Layout.preferredWidth: 150
+                Layout.preferredHeight: 80
+                border.color: "seagreen"
+                border.width: 1
+                radius: 6
+                color: "transparent"
+                antialiasing: true
+            }
         }
     }
 }
