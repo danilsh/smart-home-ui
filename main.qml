@@ -8,11 +8,15 @@ Window {
     visible: true
     visibility: "FullScreen"
     title: qsTr("smart-home-ui")
-//    color: "black"
+    color: "black"
 
     Rectangle {
-        anchors.fill: parent
-        anchors.margins: 5
+        x: 0
+        y: 0
+        width: 400
+        height: 240
+//        anchors.fill: parent
+//        anchors.margins: 5
 //        border.color: "royalblue"
 //        border.width: 1
 //        radius: 8
@@ -26,10 +30,10 @@ Window {
 
         Text {
             id: currentTime
-            x: 30
-            y: 20
+            x: 15
+            y: 10
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 10
             color: "white"
             text: { new Date().toLocaleTimeString(Qt.locale("ru_RU"), "H:mm") }
         }
@@ -38,9 +42,9 @@ Window {
             id: currentDate
             anchors.left: currentTime.right
             anchors.top: currentTime.top
-            anchors.leftMargin: 30
+            anchors.leftMargin: 15
             font.bold: true
-            font.pixelSize: 20
+            font.pixelSize: 10
             color: "#0bdaf6"
             text: { new Date().toLocaleDateString(Qt.locale("ru_RU"), "d MMM") }
         }
